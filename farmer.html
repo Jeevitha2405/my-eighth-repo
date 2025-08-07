@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm to Consumer - Organic Food Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #d9fdd9, #b6ecb6);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2e8b57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 10px;
+        }
+        header p {
+            font-weight: bold;
+            color: #ffd700;
+        }
+        nav {
+            display: flex;
+            background: #4caf50;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: #388e3c;
+        }
+        section {
+            padding: 20px;
+            display: none;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: #2e7d32;
+        }
+        .price-list, .details {
+            background: #e8f5e9;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2e8b57;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌾 Welcome to the Farm 🌾</h1>
+        <p><b>"From Soil to Your Plate - Pure, Organic, Chemical-Free Food"</b></p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('farmer')">👨‍🌾 Farmer Harvest</a>
+        <a href="#" onclick="showSection('distributor')">🚚 Distributors</a>
+        <a href="#" onclick="showSection('processor')">🏭 Processors</a>
+        <a href="#" onclick="showSection('retailer')">🛒 Retailers</a>
+        <a href="#" onclick="showSection('transport')">🚛 Transportation</a>
+        <a href="#" onclick="showSection('packaging')">📦 Packaging</a>
+        <a href="#" onclick="showSection('consumer')">👩‍💻 Consumer</a>
+    </nav>
+
+    <section id="farmer">
+        <h2>👨‍🌾 Farmer Harvest Details</h2>
+        <p>All our vegetables 🥕🥦🍅 are organically grown, free from pesticides and fertilizers. Farmers ensure natural soil fertility and crop rotation.</p>
+        <div class="price-list">
+            <h3>Harvested Vegetables & Prices 🛒</h3>
+            <ul>
+                <li>🍅 Tomatoes - ₹40/kg</li>
+                <li>🥕 Carrots - ₹50/kg</li>
+                <li>🥬 Spinach - ₹30/bundle</li>
+                <li>🍆 Brinjals - ₹45/kg</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="distributor">
+        <h2>🚚 Distributor Details</h2>
+        <div class="details">
+            <p>Distributors collect fresh produce directly from farmers ensuring no middlemen interfere. Cold storage transportation is used to maintain freshness.</p>
+            <p>Distributor Charges: ₹5 per kg</p>
+        </div>
+    </section>
+
+    <section id="processor">
+        <h2>🏭 Processing Information</h2>
+        <div class="details">
+            <p>Vegetables are sorted, cleaned, and quality-checked manually without any chemical treatments.</p>
+            <p>Processing Charges: ₹7 per kg</p>
+        </div>
+    </section>
+
+    <section id="retailer">
+        <h2>🛒 Retailer Role</h2>
+        <div class="details">
+            <p>Retailers display fresh, organic produce ensuring hygiene and transparency about product origin.</p>
+            <p>Retailer Margin: ₹10 per kg</p>
+        </div>
+    </section>
+
+    <section id="transport">
+        <h2>🚛 Transportation Details</h2>
+        <div class="details">
+            <p>Transportation from farm to consumer is GPS-tracked ensuring safe, timely delivery.</p>
+            <ul>
+                <li>Farm to Distribution Center: ₹3 per kg</li>
+                <li>Distribution Center to Retailers: ₹2 per kg</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="packaging">
+        <h2>📦 Packaging Information</h2>
+        <div class="details">
+            <p>Eco-friendly packaging materials are used, ensuring zero plastic usage and complete safety of products.</p>
+            <p>Packaging Cost: ₹5 per kg</p>
+        </div>
+    </section>
+
+    <section id="consumer">
+        <h2>👩‍💻 Consumer Section</h2>
+        <div class="details">
+            <h3>Customer Reviews ⭐</h3>
+            <ul>
+                <li>"Freshest vegetables I've ever received! 🥬" - Priya</li>
+                <li>"Truly organic, tastes different from market produce. 🍅" - Ravi</li>
+            </ul>
+
+            <h3>Order Details 💳</h3>
+            <p>Payment Options: 💵 UPI, 💳 Credit/Debit Card, 💰 Cash on Delivery</p>
+            <p>Delivery Address: Enter your location at checkout for doorstep delivery. 🏡</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Organic Supply Chain - Healthy Food for Everyone 🥗</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
